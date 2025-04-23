@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Theme from "./Theme";
 
 const Navbar = () => {
   return (
@@ -17,7 +18,9 @@ const Navbar = () => {
         </p>
       </Link>
       <p>Search</p>
-      <div className="flex-between">Theme</div>
+      <div className="flex-between">
+        <Theme />
+      </div>
     </nav>
   );
 };
