@@ -375,19 +375,16 @@ body {
     @apply bg-red-500 dark:bg-red-700;
   }
 
-  .bg-auth-light {
+  .bg-auth {
     background-image: var(--bg-auth-light);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+}
 
-  .bg-auth-dark {
-    background-image: var(--bg-auth-dark);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.dark .bg-auth {
+  background-image: var(--bg-auth-dark);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
