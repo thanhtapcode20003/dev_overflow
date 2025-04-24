@@ -59,6 +59,8 @@ body {
   --color-light-800: #f4f6f8;
   --color-light-850: #fdfdfd;
   --color-light-900: #ffffff;
+  --color-red-100: #dc2626;
+  --color-red-900: #801b1e;
 
   /* Border Radius */
   --radius-2: 8px;
@@ -79,6 +81,11 @@ body {
   /* Background Images */
   --bg-auth-dark: url("/images/auth-dark.png");
   --bg-auth-light: url("/images/auth-light.png");
+  --dark-gradient: linear-gradient(
+    232deg,
+    rgba(23, 28, 35, 0.41) 0%,
+    rgba(19, 22, 28, 0.7) 100%
+  );
 
   /* Screens */
   --breakpoint-xs: 420px;
@@ -362,6 +369,24 @@ body {
 
   .tab {
     @apply min-h-full dark:bg-dark-400 bg-light-800 text-light-500 dark:data-[state=active]:bg-dark-300 data-[state=active]:bg-primary-100 data-[state=active]:text-primary-500;
+  }
+
+  .toast-error {
+    @apply bg-red-500 dark:bg-red-700;
+  }
+
+  .bg-auth-light {
+    background-image: var(--bg-auth-light);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-auth-dark {
+    background-image: var(--bg-auth-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
