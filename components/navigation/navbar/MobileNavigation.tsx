@@ -31,7 +31,10 @@ const MobileNavigation = () => {
         className="background-light900_dark200 border-none"
       >
         <SheetTitle className="hidden">Navigation</SheetTitle>
-        <Link href="/" className="flex items-center gap-1">
+        <SheetDescription className="hidden">
+          Mobile navigation menu for DevOverflow
+        </SheetDescription>
+        <Link href="/" className="flex items-center gap-1 pl-5 pt-4">
           <Image
             src="/images/site-logo.svg"
             width={23}
@@ -40,7 +43,7 @@ const MobileNavigation = () => {
           />
 
           <p className="h2-bold font-space-grotesk text-dark-100 dark:text-light-900">
-            Dev<span className="text-primary-500">Flow</span>
+            Dev<span className="text-primary-500">Overflow</span>
           </p>
         </Link>
 
