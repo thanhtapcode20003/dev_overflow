@@ -6,6 +6,7 @@ import LocalSearch from "@/components/search/LocalSearch";
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
 import handleError from "@/lib/handlers/error";
+import dbConnect from "@/lib/mongoose";
 import { ValidationError } from "@/lib/http-errors";
 
 const questions = [
@@ -49,23 +50,28 @@ const questions = [
   },
 ];
 
-// const test = async () => {
-//   try {
-//     throw new ValidationError({
-//       title: ["Required"],
-//       tags: ["JavaScript not valid"],
-//     });
-//   } catch (error) {
-//     handleError(error);
-//   }
-// };
+// Initialize the database connection
+
 interface SearchParams {
   searchParams: Promise<{ [key: string]: string }>;
 }
-
+const connectToDatabase = async () => {
+  try {
+    // await dbConnect();
+    // return { success: true };
+    throw new ValidationError({
+      title: ["Database connection failed"],
+      tags: ["Invalid Java tag"],
+    });
+  } catch (error) {
+    console.error("Failed to connect to the database:", error);
+    return { success: false, error };
+  }
+};
 const Home = async ({ searchParams }: SearchParams) => {
-  // const result = await test();
-  // console.log(result);
+  //test dbConnect
+  const result = await connectToDatabase();
+  console.log(result);
 
   const { query = "", filter = "" } = await searchParams;
 
